@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "tabs": [
+    {
+      "key": "main",
+      "name": "Main",
+      "active": true,
+      "layout": {
+        "panel": {
+          "key": "chat",
+          "type": "chat",
+          "metadata": {}
+        }
+      }
+    }
+  ]
+}
