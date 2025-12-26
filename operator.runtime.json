@@ -1,4 +1,53 @@
 {
   "version": 2,
-  "processes": []
+  "processes": [
+    {
+      "key": "dev-server",
+      "kind": "service",
+      "displayName": "Dev Server",
+      "command": {
+        "argv": [
+          "bun",
+          "run",
+          "dev",
+          "--",
+          "--filter=app"
+        ],
+        "cwd": "turborepo"
+      },
+      "lifecycle": {
+        "onBoot": "ensure",
+        "onFork": "ensure",
+        "onResume": "ensure"
+      },
+      "ports": [
+        {
+          "key": "http",
+          "port": 3000,
+          "routes": [
+            {
+              "routeKey": "root",
+              "name": "Root",
+              "href": ""
+            },
+            {
+              "routeKey": "admin",
+              "name": "Admin",
+              "href": "admin"
+            },
+            {
+              "routeKey": "admin-files",
+              "name": "Admin Files",
+              "href": "admin/files"
+            },
+            {
+              "routeKey": "admin-ops",
+              "name": "Ops Console",
+              "href": "admin/ops"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

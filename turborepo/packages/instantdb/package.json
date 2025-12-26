@@ -1,0 +1,35 @@
+{
+  "name": "@repo/instantdb",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client-db.ts",
+    "./server": "./src/admin-db.ts"
+  },
+  "scripts": {
+    "db:push-schema": "instant-cli push schema -y",
+    "db:push-perms": "instant-cli push perms",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "lint:fix:unsafe": "biome check . --unsafe --write",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@instantdb/admin": "catalog:",
+    "@instantdb/react": "catalog:",
+    "@instantdb/core": "catalog:",
+    "react": "catalog:",
+    "next": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@repo/vitest-config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@types/react": "catalog:",
+    "instant-cli": "^0.21.10"
+  }
+}

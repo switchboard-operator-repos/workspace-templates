@@ -1,0 +1,49 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "envMode": "loose",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "lint:fix": {
+      "dependsOn": ["^lint:fix"]
+    },
+    "lint:fix:unsafe": {
+      "dependsOn": ["^lint:fix:unsafe"]
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": []
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:push-schema": {
+      "dependsOn": ["^db:push-schema"],
+      "env": ["NEXT_PUBLIC_INSTANT_APP_ID", "INSTANT_APP_ADMIN_TOKEN"]
+    },
+    "db:push-perms": {
+      "dependsOn": ["^db:push-perms"]
+    },
+    "trigger:deploy": {
+      "dependsOn": ["^trigger:deploy"],
+      "cache": false,
+      "inputs": ["$TURBO_DEFAULT$"],
+      "env": ["TRIGGER_API_KEY", "TRIGGER_PROJECT_REF"]
+    }
+  }
+}

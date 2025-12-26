@@ -1,0 +1,29 @@
+{
+  "name": "@repo/extension-ops-hooks",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "lint:fix:unsafe": "biome check . --unsafe --write",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --passWithNoTests --run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@repo/extension-trpc-router": "workspace:*",
+    "@repo/trpc-base-server": "workspace:*",
+    "@repo/trpc-hooks-utils": "workspace:*",
+    "@tanstack/react-query": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@repo/vitest-config": "workspace:*",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

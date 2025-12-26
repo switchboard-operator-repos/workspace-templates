@@ -1,0 +1,82 @@
+{
+  "name": "agent-turbo-template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build --filter=template --filter=trigger-runner",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules",
+    "dev": "turbo dev --filter=./apps/* --filter=!template",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "lint:fix:unsafe": "turbo lint:fix:unsafe",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "trigger:deploy": "turbo run trigger:deploy --filter=trigger-runner"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.1",
+    "@turbo/gen": "^2.5.6",
+    "ignore": "7.0.5",
+    "lefthook": "1.12.2",
+    "postcss-load-config": "6.0.1",
+    "turbo": "2.5.5",
+    "typescript": "5.8.2",
+    "ultracite": "6.0.4"
+  },
+  "packageManager": "bun@1.2.19",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "packages/*/*",
+      "packages/*/*/*",
+      "scripts"
+    ],
+    "catalog": {
+      "@biomejs/biome": "2.3.1",
+      "@ai-sdk/react": "2.0.12",
+      "@instantdb/admin": "0.21.3",
+      "@instantdb/core": "0.21.3",
+      "@instantdb/react": "0.21.3",
+      "@instantdb/react-native": "0.21.3",
+      "@instantdb/platform": "0.21.3",
+      "@tailwindcss/postcss": "4.1.11",
+      "@tanstack/react-query": "5.83.1",
+      "@tanstack/query-core": "5.83.1",
+      "@trpc/client": "11.4.4",
+      "@trpc/server": "11.4.4",
+      "@trpc/tanstack-react-query": "11.4.4",
+      "@types/node": "^22",
+      "@types/react": "19.1.9",
+      "@types/react-dom": "19.1.7",
+      "ai": "5.0.11",
+      "lucide-react": "0.539.0",
+      "next": "16.0.0",
+      "react": "19.1.0",
+      "react-dom": "19.1.0",
+      "tailwindcss": "4.1.11",
+      "tw-animate-css": "1.3.6",
+      "@sentry/react": "10.3.0",
+      "sonner": "2.0.7",
+      "typescript": "5.8.2",
+      "vitest": "3.2.4",
+      "zod": "4.0.17",
+      "parallel-web": "0.1.0",
+      "@codesandbox/sdk": "2.2.1",
+      "@trigger.dev/build": "4.0.4",
+      "@trigger.dev/sdk": "4.0.4",
+      "@trigger.dev/react-hooks": "4.0.4",
+      "trigger.dev": "4.0.4",
+      "@opentelemetry/api": "1.9.0",
+      "superjson": "2.2.2",
+      "vite-tsconfig-paths": "5.1.4",
+      "@vitest/coverage-v8": "3.2.4"
+    }
+  },
+  "dependencies": {
+    "@types/bun": "^1.2.19"
+  }
+}

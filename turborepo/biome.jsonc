@@ -1,0 +1,55 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.1/schema.json",
+  "extends": ["ultracite/core", "ultracite/react", "ultracite/next"],
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double"
+    }
+  },
+  "linter": {
+    "includes": ["**", "!bun.lock"],
+    "rules": {
+      "performance": {
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off",
+        "noVoid": "off"
+      },
+      "a11y": {
+        "useSemanticElements": "off",
+        "useAriaPropsForRole": "off",
+        "useKeyWithClickEvents": "off",
+        "useFocusableInteractive": "off",
+        "noStaticElementInteractions": "off"
+      },
+      "correctness": {
+        "noInvalidPositionAtImportRule": "off",
+        "noNestedComponentDefinitions": "off"
+      },
+      "nursery": {
+        "useConsistentArrowReturn": "off",
+        "noEmptySource": "off",
+        "noShadow": "warn"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "noNestedTernary": "off",
+        "noMagicNumbers": "off",
+        "useNamingConvention": "off"
+      },
+      "suspicious": {
+        "noConsole": "off",
+        "noUnknownAtRules": "off",
+        "useAwait": "off"
+      }
+    }
+  }
+}
