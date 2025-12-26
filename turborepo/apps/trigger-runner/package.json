@@ -1,0 +1,22 @@
+{
+  "name": "trigger-runner",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "trigger deploy --env preview",
+    "trigger:deploy": "trigger deploy --env preview",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "lint:fix:unsafe": "biome check . --unsafe --write",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trigger.dev/sdk": "catalog:",
+    "trigger.dev": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@trigger.dev/build": "catalog:"
+  }
+}

@@ -6,10 +6,54 @@
       "name": "Main",
       "active": true,
       "layout": {
+        "direction": "horizontal",
+        "children": [
+          {
+            "panel": {
+              "key": "preview",
+              "type": "preview",
+              "metadata": {
+                "portKey": "http",
+                "href": ""
+              }
+            }
+          },
+          {
+            "sizeUnits": 2,
+            "panel": {
+              "key": "chat",
+              "type": "chat",
+              "metadata": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "files",
+      "name": "Files",
+      "layout": {
         "panel": {
-          "key": "chat",
-          "type": "chat",
-          "metadata": {}
+          "key": "preview",
+          "type": "preview",
+          "metadata": {
+            "portKey": "http",
+            "href": "admin/files"
+          }
+        }
+      }
+    },
+    {
+      "key": "ops",
+      "name": "Ops",
+      "layout": {
+        "panel": {
+          "key": "preview",
+          "type": "preview",
+          "metadata": {
+            "portKey": "http",
+            "href": "admin/ops"
+          }
         }
       }
     }
