@@ -69,7 +69,9 @@ const html = `<!doctype html>
       term.focus();
 
       const wsProtocol = window.location.protocol === "https:" ? "wss" : "ws";
-      const ws = new WebSocket(`${wsProtocol}://${window.location.host}/ws`);
+      const ws = new WebSocket(
+        wsProtocol + "://" + window.location.host + "/ws"
+      );
 
       const sendResize = () => {
         const dims = fitAddon.proposeDimensions?.();
@@ -118,7 +120,7 @@ const html = `<!doctype html>
       ws.addEventListener("open", () => {
         sendResize();
         if (pm2Target) {
-          ws.send(`pm2 logs ${pm2Target} --lines 200\n`);
+          ws.send("pm2 logs " + pm2Target + " --lines 200\\n");
         }
       });
     </script>
