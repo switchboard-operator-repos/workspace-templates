@@ -1,4 +1,78 @@
 {
   "version": 2,
-  "processes": []
+  "processes": [
+    {
+      "key": "ghostty",
+      "kind": "service",
+      "displayName": "Ghostty Web",
+      "command": {
+        "argv": ["node", "ghostty-web-demo.mjs"],
+        "cwd": "scripts",
+        "env": {
+          "PORT": "8083"
+        }
+      },
+      "lifecycle": {
+        "onBoot": "ensure",
+        "onFork": "ensure",
+        "onResume": "ensure"
+      },
+      "ports": [
+        {
+          "key": "ghostty",
+          "port": 8083,
+          "routes": [
+            {
+              "routeKey": "root",
+              "name": "Terminal",
+              "href": ""
+            },
+            {
+              "routeKey": "operator-sync-logs",
+              "name": "Operator Sync Logs",
+              "href": "?pm2=operator-sync-api"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "lazygit",
+      "kind": "service",
+      "displayName": "Lazygit",
+      "command": {
+        "argv": [
+          "/usr/local/bin/ttyd",
+          "--port",
+          "7682",
+          "--writable",
+          "--cwd",
+          "/project/workspace",
+          "-t",
+          "fontFamily=JetBrains Mono,Menlo,Monaco,monospace",
+          "-t",
+          "theme={\"background\":\"#303446\",\"foreground\":\"#c6d0f5\",\"cursor\":\"#c6d0f5\",\"selectionBackground\":\"#414559\"}",
+          "lazygit"
+        ]
+      },
+      "lifecycle": {
+        "onBoot": "ensure",
+        "onFork": "ensure",
+        "onResume": "ensure"
+      },
+      "ports": [
+        {
+          "key": "lazygit",
+          "port": 7682,
+          "routes": [
+            {
+              "routeKey": "root",
+              "name": "Lazygit",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

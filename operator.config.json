@@ -2,15 +2,85 @@
   "version": 4,
   "tabs": [
     {
-      "key": "main",
-      "name": "Main",
+      "key": "terminal",
+      "name": "Terminal",
       "active": true,
       "layout": {
-        "panel": {
-          "key": "chat",
-          "type": "chat",
-          "metadata": {}
-        }
+        "direction": "horizontal",
+        "children": [
+          {
+            "panel": {
+              "key": "terminal-preview",
+              "type": "preview",
+              "metadata": {
+                "portKey": "ghostty",
+                "href": ""
+              }
+            }
+          },
+          {
+            "sizeUnits": 2,
+            "panel": {
+              "key": "terminal-chat",
+              "type": "chat",
+              "metadata": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "lazygit",
+      "name": "Lazygit",
+      "layout": {
+        "direction": "horizontal",
+        "children": [
+          {
+            "panel": {
+              "key": "lazygit-preview",
+              "type": "preview",
+              "metadata": {
+                "portKey": "lazygit",
+                "href": ""
+              }
+            }
+          },
+          {
+            "sizeUnits": 2,
+            "panel": {
+              "key": "lazygit-chat",
+              "type": "chat",
+              "metadata": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "key": "operator-sync-logs",
+      "name": "Operator Sync Logs",
+      "layout": {
+        "direction": "horizontal",
+        "children": [
+          {
+            "panel": {
+              "key": "operator-sync-logs-preview",
+              "type": "preview",
+              "metadata": {
+                "portKey": "ghostty",
+                "href": "?pm2=operator-sync-api"
+              }
+            }
+          },
+          {
+            "sizeUnits": 2,
+            "panel": {
+              "key": "operator-sync-logs-chat",
+              "type": "chat",
+              "metadata": {}
+            }
+          }
+        ]
       }
     }
   ]

@@ -1,0 +1,31 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "workspace-terminal-template",
+      "dependencies": {
+        "@lydell/node-pty": "1.0.1",
+        "ghostty-web": "0.4.0-next.3.gc7e37fb",
+        "ws": "8.18.0",
+      },
+    },
+  },
+  "packages": {
+    "@lydell/node-pty": ["@lydell/node-pty@1.0.1", "", { "optionalDependencies": { "@lydell/node-pty-darwin-arm64": "1.0.1", "@lydell/node-pty-darwin-x64": "1.0.1", "@lydell/node-pty-linux-x64": "1.0.1", "@lydell/node-pty-win32-arm64": "1.0.1", "@lydell/node-pty-win32-x64": "1.0.1" } }, "sha512-Z/Gj+xizFU7WF5aMsBd8iBt0BfoqkgKz5w7g7pgUCxhoDDrtil1OA2MimbcEIh20KJFjanbf/QXERwKIHuybEQ=="],
+
+    "@lydell/node-pty-darwin-arm64": ["@lydell/node-pty-darwin-arm64@1.0.1", "", { "os": "darwin", "cpu": "arm64" }, "sha512-DtZOmuKQDSSya2Q7PCrzysd4Um5XKYYD4n8pWuaw8yi1unf9rLkPIxO3D/jIbxwttVhk1uN9H2dz3oU8uIzrRQ=="],
+
+    "@lydell/node-pty-darwin-x64": ["@lydell/node-pty-darwin-x64@1.0.1", "", { "os": "darwin", "cpu": "x64" }, "sha512-VEkPOKVhmuh4HNaXY3M2N089c+kW2wCOWW9teeR/zKYtTDl+7RPhYAgbhRUn0OM0QBchp45IRYCBLpsC7KnHqA=="],
+
+    "@lydell/node-pty-linux-x64": ["@lydell/node-pty-linux-x64@1.0.1", "", { "os": "linux", "cpu": "x64" }, "sha512-HOPx63Gi2CoyUe+Q9jYYRuvbzi7PuiUrFfDSDHlQ725e+3SVbE2ZOT/6uU85+PDV0wHg/C8cN3JDe5pLyzBkuw=="],
+
+    "@lydell/node-pty-win32-arm64": ["@lydell/node-pty-win32-arm64@1.0.1", "", { "os": "win32", "cpu": "arm64" }, "sha512-auCh7jHuO/BvLogkdYOQxpuiMY4izGQ7LWqeUlG96hdWBlcpWfgFEbRpY3KBN4UlncK+A7mdE81WpA6Gz3I06A=="],
+
+    "@lydell/node-pty-win32-x64": ["@lydell/node-pty-win32-x64@1.0.1", "", { "os": "win32", "cpu": "x64" }, "sha512-jLFrTiqv1zXeJe5Ql5r/kTb/PAFf+4y8o2FhWsZecl2lX5y11zWmZFh2wJ3/YD5l1OhEa9X9/XigrfAGYSammw=="],
+
+    "ghostty-web": ["ghostty-web@0.4.0-next.3.gc7e37fb", "", {}, "sha512-TCXUaJQ/sxaDTsTJtYPjG9REYTzCYYtnykhtOAX78cdYk8z89l5F5LK4f0QGehJ+LKQevmIfKkvZcHInasoJtw=="],
+
+    "ws": ["ws@8.18.0", "", { "peerDependencies": { "bufferutil": "^4.0.1", "utf-8-validate": ">=5.0.2" }, "optionalPeers": ["bufferutil", "utf-8-validate"] }, "sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw=="],
+  }
+}
