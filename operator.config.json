@@ -9,6 +9,7 @@
         "direction": "horizontal",
         "children": [
           {
+            "sizeUnits": 2,
             "panel": {
               "key": "terminal-preview",
               "type": "preview",
@@ -19,7 +20,7 @@
             }
           },
           {
-            "sizeUnits": 2,
+            "sizeUnits": 1,
             "panel": {
               "key": "terminal-chat",
               "type": "chat",
@@ -36,6 +37,7 @@
         "direction": "horizontal",
         "children": [
           {
+            "sizeUnits": 2,
             "panel": {
               "key": "lazygit-preview",
               "type": "preview",
@@ -46,7 +48,7 @@
             }
           },
           {
-            "sizeUnits": 2,
+            "sizeUnits": 1,
             "panel": {
               "key": "lazygit-chat",
               "type": "chat",
@@ -63,6 +65,7 @@
         "direction": "horizontal",
         "children": [
           {
+            "sizeUnits": 2,
             "panel": {
               "key": "operator-sync-logs-preview",
               "type": "preview",
@@ -73,7 +76,7 @@
             }
           },
           {
-            "sizeUnits": 2,
+            "sizeUnits": 1,
             "panel": {
               "key": "operator-sync-logs-chat",
               "type": "chat",
