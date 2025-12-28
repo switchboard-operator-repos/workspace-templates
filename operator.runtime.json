@@ -47,7 +47,7 @@
           "7682",
           "--writable",
           "--cwd",
-          "/project/workspace",
+          ".",
           "-t",
           "fontFamily=JetBrains Mono,Menlo,Monaco,monospace",
           "-t",
