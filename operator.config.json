@@ -4,12 +4,14 @@
     {
       "key": "main",
       "name": "Main",
-      "active": true,
       "layout": {
         "panel": {
-          "key": "chat",
-          "type": "chat",
-          "metadata": {}
+          "key": "preview",
+          "type": "preview",
+          "metadata": {
+            "portKey": "http",
+            "href": ""
+          }
         }
       }
     }

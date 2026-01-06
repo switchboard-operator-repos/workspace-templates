@@ -1,4 +1,34 @@
 {
   "version": 2,
-  "processes": []
+  "processes": [
+    {
+      "key": "hello",
+      "kind": "service",
+      "displayName": "Hello HTTP",
+      "command": {
+        "argv": ["node", "server.js"],
+        "env": {
+          "PORT": "8787"
+        }
+      },
+      "lifecycle": {
+        "onBoot": "ensure",
+        "onFork": "ensure",
+        "onResume": "ensure"
+      },
+      "ports": [
+        {
+          "key": "http",
+          "port": 8787,
+          "routes": [
+            {
+              "routeKey": "root",
+              "name": "Hello",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
